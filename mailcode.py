@@ -14,6 +14,7 @@ def hello_world():
     driver = webdriver.Chrome() 
     get_url = driver.current_url 
     url = get_url
+    driver.quit()
     parsed_url = urlparse(url)
     emailid = parsed_url[4]    
 
