@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from urllib.parse import urlparse
 from selenium import webdriver 
+import time
   
 
 
@@ -15,6 +16,8 @@ def hello_world():
     url = get_url
     parsed_url = urlparse(url)
     emailid = parsed_url[4]    
+
+    time.sleep(5)
         
     subject = "Hello,"
     body = "Hello, This is a test Mail" 
