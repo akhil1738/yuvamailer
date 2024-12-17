@@ -3,9 +3,8 @@ import smtplib
 from email.mime.text import MIMEText
 #from urllib.parse import urlparse
 #from selenium import webdriver 
-
-#import requests
-#import json
+import requests
+import json
   
 
 
@@ -14,11 +13,11 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
   
-    #url = "https://yuvalabs.in/"
+    url = "https://yuvalabs.in/"
 
-    #response = json.loads(requests.request("GET", url).text)
+    response = json.loads(requests.request("GET", url).text)
 
-    url = "Hello World"
+    url = response
 
     return url
 
