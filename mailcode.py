@@ -25,7 +25,22 @@ def hello_world():
 
     users = db.child("Email").get()
     email = users.val()
-    
+
+    subject = "Hello,"
+    body = "Hello, This is a test Mail"
+
+    sender = "iamyuva.org@gmail.com"
+    recipients = [email]
+    password = "svkk nskz tvxt wnib"
+
+    msg = MIMEText(body)
+    msg['Subject'] = subject
+    msg['From'] = sender
+    msg['To'] = ', '.join(recipients)
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp_server:
+        smtp_server.login(sender, password)
+        smtp_server.sendmail(sender, recipients, msg.as_string())
+  
     return email
 
 if __name__ == '__main__':
