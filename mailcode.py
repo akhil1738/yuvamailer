@@ -12,10 +12,12 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     driver = webdriver.Chrome() 
+    url = "https://yuvalabs.in/"    
+    driver.get(url)   
     get_url = driver.current_url 
-    url = get_url
+    url1 = get_url
     driver.quit()
-    parsed_url = urlparse(url)
+'''    parsed_url = urlparse(url)
     emailid = parsed_url[4]    
 
     time.sleep(5)
@@ -34,8 +36,8 @@ def hello_world():
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp_server:
         smtp_server.login(sender, password)
         smtp_server.sendmail(sender, recipients, msg.as_string())
-  
-    return emailid
+  '''
+    return url1
 
 if __name__ == '__main__':
     app.run()
