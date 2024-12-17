@@ -2,6 +2,7 @@ from flask import Flask
 import smtplib
 from email.mime.text import MIMEText
 import pyrebase
+import time
 
 app = Flask(__name__)
 
@@ -25,6 +26,8 @@ def hello_world():
 
     users = db.child("Email").get()
     email = users.val()
+
+    time.sleep(4)
 
     subject = "Hello,"
     body = "Hello, This is a test Mail"
