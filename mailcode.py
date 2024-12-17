@@ -27,7 +27,7 @@ def hello_world():
     users = db.child("Email").get()
     email = users.val()
 
-    time.sleep(4)
+    time.sleep(1)
 
     subject = "Hello,"
     body = "Hello, This is a test Mail"
