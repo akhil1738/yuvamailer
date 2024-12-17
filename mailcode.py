@@ -1,11 +1,11 @@
 from flask import Flask
 import smtplib
 from email.mime.text import MIMEText
-from urllib.parse import urlparse
-from selenium import webdriver 
-import time
-import requests
-import json
+#from urllib.parse import urlparse
+#from selenium import webdriver 
+
+#import requests
+#import json
   
 
 
