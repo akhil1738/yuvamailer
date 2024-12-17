@@ -4,6 +4,8 @@ from email.mime.text import MIMEText
 from urllib.parse import urlparse
 from selenium import webdriver 
 import time
+import requests
+import json
   
 
 
@@ -11,9 +13,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    
+  
+    #url = "https://yuvalabs.in/"
 
-    return "Hello World"
+    #response = json.loads(requests.request("GET", url).text)
+
+    url = "Hello World"
+
+    return url
 
 if __name__ == '__main__':
     app.run()
