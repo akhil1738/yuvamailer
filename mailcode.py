@@ -11,14 +11,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    driver = webdriver.Chrome() 
-    url = "https://yuvalabs.in/"    
-    driver.get(url)   
-    get_url = driver.current_url 
-    url1 = get_url
-    driver.quit()
+    
 
-    return url1
+    return "Hello World"
 
 if __name__ == '__main__':
     app.run()
