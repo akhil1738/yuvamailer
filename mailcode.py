@@ -28,15 +28,15 @@ def hello_world():
     email = mail.val()
 
     name = db.child("JoinUsMessage").child("Name").get()
-    Namebg = name.val()
+    namebg = name.val()
 
     message = db.child("JoinUsMessage").child("Message").get()
-    Messagebg = message.val()
+    messagebg = message.val()
 
     time.sleep(1)
 
     subject = "Hey Akhil, you have recieved a message from YUVA!,"
-    body = "This message is from" + Namebg + "with a mail ID as" + email + "and the message is as follows" + Messagebg + ""
+    body = "This message is from" + namebg + "with a mail ID as" + email + "and the message is as follows" + messagebg + ""
 
     sender = "iamyuva.org@gmail.com"
     recipients = ["yuvalabs@gmail.com"]
