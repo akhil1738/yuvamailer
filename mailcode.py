@@ -36,7 +36,7 @@ def hello_world():
     time.sleep(1)
 
     subject = "Hey Akhil, you have recieved a message from YUVA!,"
-    body = "This message is from" + namebg + "with a mail ID as" + email + "and the message is as follows" + messagebg + ""
+    body = "This message is from" + " " + namebg + " " + "with a mail ID as" + " " + email + " " + "and the message is as follows" + " " + messagebg + "."
 
     sender = "iamyuva.org@gmail.com"
     recipients = ["yuvalabs@gmail.com"]
