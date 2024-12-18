@@ -24,16 +24,22 @@ def hello_world():
 
     db = firebase.database()
 
-    users = db.child("Email").get()
-    email = users.val()
+    mail = db.child("JoinUsMessage").child("Email")get()
+    email = mail.val()
+
+    name = db.child("JoinUsMessage").child("Name")get()
+    Namebg = name.val()
+
+    message = db.child("JoinUsMessage").child("Message")get()
+    Messagebg = message.val()
 
     time.sleep(1)
 
-    subject = "Hello,"
-    body = "Hello, This is a test Mail"
+    subject = "Hey Akhil, you have recieved a message from YUVA!,"
+    body = "This message is from" + Namebg + "with a mail ID as" + email + "and the message is as follows" + Messagebg + ""
 
     sender = "iamyuva.org@gmail.com"
-    recipients = [email]
+    recipients = ["yuvalabs@gmail.com"]
     password = "svkk nskz tvxt wnib"
 
     msg = MIMEText(body)
