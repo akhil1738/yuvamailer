@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 import smtplib
 from email.mime.text import MIMEText
 import pyrebase
 import time
-import webbrowser
+
 
 app = Flask(__name__)
 
@@ -51,7 +51,7 @@ def hello_world():
         smtp_server.login(sender, password)
         smtp_server.sendmail(sender, recipients, msg.as_string())
   
-    return webbrowser.open("https://stvarex.com/")
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()
