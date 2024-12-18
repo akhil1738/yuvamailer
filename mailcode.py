@@ -24,13 +24,13 @@ def hello_world():
 
     db = firebase.database()
 
-    mail = db.child("JoinUsMessage").child("Email")get()
+    mail = db.child("JoinUsMessage").child("Email").get()
     email = mail.val()
 
-    name = db.child("JoinUsMessage").child("Name")get()
+    name = db.child("JoinUsMessage").child("Name").get()
     Namebg = name.val()
 
-    message = db.child("JoinUsMessage").child("Message")get()
+    message = db.child("JoinUsMessage").child("Message").get()
     Messagebg = message.val()
 
     time.sleep(1)
